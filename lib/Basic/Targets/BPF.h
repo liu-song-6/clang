@@ -47,7 +47,8 @@ public:
                         MacroBuilder &Builder) const override;
 
   bool hasFeature(StringRef Feature) const override {
-    return Feature == "bpf" || Feature == "alu32" || Feature == "dwarfris";
+    return Feature == "bpf" || Feature == "alu32" || Feature == "dwarfris" ||
+      Feature == "emitbtf";
   }
 
   void setFeatureEnabled(llvm::StringMap<bool> &Features, StringRef Name,
